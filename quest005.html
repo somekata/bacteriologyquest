@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>問題005</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="table.css" />
+    <link rel="stylesheet" href="taxonomy.css" />
+  </head>
+  <body>
+    <h1>細菌学クイズ：非定型菌</h1>
+
+    <!-- 問題1 -->
+    <div id="question1" class="shuffle" data-correct="1,4">
+      <h2 class="question-title">
+        グラム染色で検出<u><b>できない</b></u
+        >細菌はどれか。2つ選べ。
+      </h2>
+      <label
+        ><input type="checkbox" id="q1-1" /> <i>Chlamydia pneumoniae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-2" />
+        <i>Haemophylus influenzae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-3" /> <i>Klebsiella pneumoniae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-4" /> <i>Mycoplasma pneumoniae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-5" />
+        <i>Streptococcus pneumoniae</i></label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 問題2 -->
+    <div id="question2" class="shuffle" data-correct="3,4">
+      <h2 class="question-title">
+        β-ラクタム系薬が<u><b>無効な</b></u
+        >細菌はどれか。2つ選べ。
+      </h2>
+      <label><input type="checkbox" id="q2-1" /> <i>Escherichia coli</i></label>
+      <label
+        ><input type="checkbox" id="q2-2" /> <i>Klebsiella pneumoniae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-3" />
+        <i>Legionella pneumophila</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-4" /> <i>Mycoplasma pneumoniae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-5" />
+        <i>Listeria monocytogenes</i></label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 問題3 -->
+    <div id="question3" class="shuffle" data-correct="1,4">
+      <h2 class="question-title">偏性細胞内増殖菌はどれか。2つ選べ。</h2>
+      <label
+        ><input type="checkbox" id="q3-1" /> <i>Chlamydia psittaci</i></label
+      >
+      <label><input type="checkbox" id="q3-2" /> <i>Escherichia coli</i></label>
+      <label
+        ><input type="checkbox" id="q3-3" />
+        <i>Legionella pneumophila</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-4" /> <i>Rickettsia rickettsii</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-5" /> <i>Serratia marcescens</i></label
+      >
+    </div>
+
+    <hr />
+    <!-- 問題4 -->
+    <div id="question4" class="shuffle" data-correct="3,5">
+      <h2 class="question-title">
+        細菌とその培養に用いる培地の組み合わせとして正しいのはどれか。2つ選べ。
+      </h2>
+      <label
+        ><input type="checkbox" id="q4-1" /> <i>Campylobacter jejuni</i> ---
+        サブロー培地</label
+      >
+      <label
+        ><input type="checkbox" id="q4-2" /> <i>Chlamydia psittaci</i> ---
+        チョコレート寒天培地</label
+      >
+      <label
+        ><input type="checkbox" id="q4-3" /> <i>Mycoplasma pneumoniae</i> ---
+        PPLO培地</label
+      >
+      <label
+        ><input type="checkbox" id="q4-4" /> <i>Rickettsia rickettsii</i> ---
+        BCYE-α培地</label
+      >
+      <label
+        ><input type="checkbox" id="q4-5" /> <i>Streptococcus pneumoniae</i> ---
+        血液寒天培地</label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 判定ボタン -->
+    <button onclick="checkAnswers()">結果を確認する</button>
+
+    <!-- 判定結果と解答解説 -->
+    <div id="result" class="hidden">
+      <h3 class="inresult">判定</h3>
+      <div id="judgement" class="whitebox"></div>
+
+      <h3 class="inresult">正解</h3>
+      <div id="correct-answers" class="whitebox"></div>
+
+      <h3 class="inresult">解説</h3>
+      <div class="whitebox">
+        <p>　β-ラクタム系薬が無効な、<i>Mycoplasma</i>属菌、<i>Legionella</i>属菌、<i>Chlamydia</i>属菌による肺炎を非定型肺炎と総称します。また、その原因菌を非定型菌と総称します。肺炎の原因ではありませんが、<i>Rickettsia</i>属菌とその近縁種（<i>Anaplasma</i>属菌や<i>Ehlrichia</i>属菌など）も含めて、非定型菌と総称することがあります。</p>
+        <p>　β-ラクタム系薬が無効な理由は様々で、<i>Mycoplasma</i>属菌の場合には、そもそも標的となる細胞壁がありません。<i>Chlamydia</i>属菌は細胞壁がペプチドグリカンではないことに加えて、偏性細胞内増殖菌であることが理由です。<i>Legionella</i>属菌は人工培地での培養が可能であるため、通性細胞内増殖菌ですが、宿主内では細胞内で増殖するため、細胞内移行が悪いβ-ラクタム系薬が効かないと考えられます。なお、<i>Rickettsia</i>属菌とその近縁種は偏性細胞内増殖菌です。</p>
+      </div>
+      <section class="appendix">
+        <h3 class="inresult">Taxonomy</h3>
+        <div class="whitebox">
+          <i>Chlamydiota</i>
+          <ul class="taxonomy-ladder">
+            <li>
+              <i>Chlamydiia</i>
+              <ul>
+                <li>
+                  <i>Chlamydiales</i>
+                  <ul>
+                    <li>
+                      <i>Chlamydiaceae</i>
+                      <ul>
+                        <li><i>Chlamydia</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <i>Mycoplasmatota</i>
+          <ul class="taxonomy-ladder">
+            <li>
+              <i>Mollicutes</i>
+              <ul>
+                <li>
+                  <i>Mycoplasmatales</i>
+                  <ul>
+                    <li>
+                      <i>Mycoplasmataceae</i>
+                      <ul>
+                        <li><i>Mycoplasma</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <i>Pseudomonadota</i>
+          <ul class="taxonomy-ladder">
+            <li>
+              <i>Alphaproteobacteria</i>
+              <ul>
+                <li>
+                  <i>Rickettsiales</i>
+                  <ul>
+                    <li>
+                      <i>Ehrlichiaceae</i>
+                      <ul>
+                        <li><i>Anaplasma</i></li>
+                        <li><i>Ehrlichia</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Rickettsiaceae</i>
+                      <ul>
+                        <li><i>Rickettsia</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i>Gammaproteobacteria</i>
+              <ul>
+                <li>
+                  <i>Legionellales</i>
+                  <ul>
+                    <li>
+                      <i>Coxiellaceae</i>
+                      <ul>
+                        <li><i>Coxiella</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Legionellaceae</i>
+                      <ul>
+                        <li><i>Legionella</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <h3 class="inresult">サマリー</h3>
+        <div class="whitebox">
+            <p>培地と培養に関して整理しておきます。</p>
+
+          <table>
+            <tr>
+              <th>培地</th>
+              <th>主な用途</th>
+            </tr>
+            <tr>
+              <td>普通寒天培地</td>
+              <td>
+                大腸菌や黄色ブドウ球菌、緑膿菌などの栄養要求性の低い細菌の培養
+              </td>
+            </tr>
+            <tr>
+              <td>血液寒天培地</td>
+              <td>肺炎球菌などの栄養要求性の高い細菌の培養</td>
+            </tr>
+            <tr>
+              <td>チョコレート寒天培地</td>
+              <td>インフルエンザ菌などのX因子、V因子を要求する細菌の培養</td>
+            </tr>
+            <tr>
+              <td>スキロー培地</td>
+              <td>主にカンピロバクターの培養</td>
+            </tr>
+            <tr>
+              <td>PPLO培地</td>
+              <td>マイコプラズマの培養</td>
+            </tr>
+            <tr>
+              <td>BCYE-α培地<br />WYO-α培地</td>
+              <td>レジオネラの培養</td>
+            </tr>
+            <tr>
+              <td>小川培地<br />MGIT</td>
+              <td>結核菌を含む抗酸菌の培養</td>
+            </tr>
+            <tr>
+                <td>サブロー培地</td>
+                <td>カンジダなどの真菌の培養</td>
+              </tr>
+          </table>
+          <p>
+            <ul>
+                <li>PPLO：pleuropneumonia-like organism</li>
+                <li>BCYE-α：buffered charcoal-yeast extract agar with 0.1％ α-ketoglutalate</li>
+                <li>WYO-α：Wadowsky-Yee-Okuda with α-ketoglutalate</li>
+                <li>MGIT：mycobacterial growth indicator tube</li>
+            </ul>
+            </p>
+        </div>
+        <div class="whitebox">
+          人工培地での培養に成功していない細菌・真菌
+          <ul>
+            <li><i>Coxiella burnetii</i>：Q熱の原因菌</li>
+            <li><i>Treponema pallidum</i>：梅毒の原因菌</li>
+            <li><i>Pneumocystis jirovecii</i>：ニューモシスチス肺炎の原因真菌</li>
+          </ul>
+          原理的に人工培地で培養できない細菌＝偏性細胞内増殖菌
+          <ul>
+            <li>リケッチアおよび関連種</li>
+            <li>クラミジア</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script src="shuffle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

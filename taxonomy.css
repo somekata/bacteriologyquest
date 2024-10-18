@@ -1,0 +1,35 @@
+  /* ラダー状のインデント */
+.taxonomy-ladder {
+    list-style-type: none; /* デフォルトのリストスタイルを削除 */
+    padding-left: 20px; /* 左側の余白 */
+    font-size: 16px;
+  }
+  
+  /* 各レベルのインデント調整 */
+  .taxonomy-ladder li {
+    margin: 8px 0; /* 上下にスペース */
+    padding-left: 20px; /* インデント */
+    position: relative;
+  }
+  
+  /* リストスタイルを └ にする */
+  .taxonomy-ladder li:before {
+    content: '　└'; /* カスタムリストマーカーを追加 */
+    position: absolute;
+    left: -20px; /* マーカーの位置を調整 */
+    top: -2px;
+    font-weight: bold; /* マーカーを太字に */
+  }
+  
+  /* ネストされたリストのスタイル */
+  .taxonomy-ladder ul {
+    list-style-type: none;
+    margin-left: 20px; /* ネストされたリストのインデント */
+    padding-left: 20px; /* 左側にさらに余白 */
+  }
+  
+  .taxonomy-ladder li i {
+    font-style: italic; /* イタリック体 */
+    color: #333;
+  }
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>細菌学クエストへようこそ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+        <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>細菌学クエストへようこそ</h1>
+    </header>
+    <div class="menu-container">
+        <a href="menu.html" class="button">メニューへ</a>
+    </div>
+    <!-- プログレスバー -->
+    <div class="progress-bar-container">
+
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+    <section id="welcome">
+      <p>　細菌学の基本と応用をクイズ形式でまとめました。参考にしてください。</p>
+
+    </section>
+
+    <!-- セクション 1: 作成背景 -->
+    <section id="section1">
+      <h2>概要</h2>
+      <p>　拙著の一部を引用しております。詳細をご覧になりたい場合には、以下の拙著をご覧ください。</p>
+      <p><ul>
+        <li>染方史郎の楽しく覚えず好きになる　感じる細菌学ｘ抗菌薬</li>
+        <li>染方史郎の　続・感じる細菌学　耐性菌・真菌編</li>
+      </ul></p>
+      <button class="button" id="next1">次へ</button>
+    </section>
+
+    <!-- セクション 2: 操作方法 -->
+    <section id="section2" style="display:none;">
+      <h2>操作方法</h2>
+      <p>　メニューから各問題へ進み、内容を確認してください。</p>
+      <button class="button" id="prev2">戻る</button>
+      <button class="button" id="next2">次へ</button>
+    </section>
+    <!-- セクション 3: バージョン情報 -->
+    <section id="section3" style="display:none;">
+
+      <p>バージョン1.0 (2024年10月18日)。...</p>
+      <button class="button" id="prev3">戻る</button>
+    </section>
+
+
+  </body>
+  <footer>
+    <p>&copy; 2024 細菌学クエスト</p>
+  </footer>
+</html>

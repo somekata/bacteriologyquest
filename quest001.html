@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>問題001</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="table.css" />
+    <link rel="stylesheet" href="taxonomy.css" />
+  </head>
+  <body>
+    <h1>細菌学クイズ：グラム陽性球菌</h1>
+
+    <!-- 問題1 -->
+    <div id="question1" class="shuffle" data-correct="1,5">
+      <h2 class="question-title">グラム陽性球菌はどれか。2つ選べ。</h2>
+      <label
+        ><input type="checkbox" id="q1-1" /> <i>Enterococcus faecium</i></label
+      >
+      <label><input type="checkbox" id="q1-2" /> <i>Escherichia coli</i></label>
+      <label
+        ><input type="checkbox" id="q1-3" /> <i>Klebsiella pneumoniae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-4" />
+        <i>Pseudomonas aeruginosa</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-5" /> <i>Staphylococcus aureus</i></label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 問題2 -->
+    <div id="question2" class="shuffle" data-correct="2,3">
+      <h2 class="question-title">カタラーゼ陽性の細菌はどれか。2つ選べ。</h2>
+      <label
+        ><input type="checkbox" id="q2-1" /> <i>Enterococcus faecium</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-2" /> <i>Staphylococcus aureus</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-3" />
+        <i>Staphylococcus epidermidis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-4" />
+        <i>Streptococcus agalactiae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-5" />
+        <i>Streptococcus pneumoniae</i></label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 問題3 -->
+    <div id="question3" class="fixed" data-correct="1,4">
+      <h2 class="question-title">β溶血性を示す細菌はどれか。2つ選べ。</h2>
+      <label
+        ><input type="checkbox" id="q3-1" />
+        <i>Streptococcus agalactiae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-2" /> <i>Streptococcus mitis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-3" />
+        <i>Streptococcus pneumoniae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-4" />
+        <i>Streptococcus pyogenes</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-5" />
+        <i>Streptococcus salivarius</i></label
+      >
+    </div>
+    <hr />
+    <!-- 問題4 -->
+    <div id="question4" class="fixed" data-correct="1,3">
+      <h2 class="question-title">
+        コアグラーゼ陽性のブドウ球菌はどれか。2つ選べ。
+      </h2>
+      <label
+        ><input type="checkbox" id="q4-1" /> <i>Staphylococcus aureus</i></label
+      >
+      <label
+        ><input type="checkbox" id="q4-2" />
+        <i>Staphylococcus epidermidis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q4-3" />
+        <i>Staphylococcus intermedius</i></label
+      >
+      <label
+        ><input type="checkbox" id="q4-4" />
+        <i>Staphylococcus lugdunensis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q4-5" />
+        <i>Staphylococcus saprophyticus</i></label
+      >
+    </div>
+    <hr />
+    <!-- 判定ボタン -->
+    <button onclick="checkAnswers()">結果を確認する</button>
+
+    <!-- 判定結果と解答解説 -->
+    <div id="result" class="hidden">
+      <h3 class="inresult">判定</h3>
+      <div id="judgement" class="whitebox"></div>
+
+      <h3 class="inresult">正解</h3>
+      <div id="correct-answers" class="whitebox"></div>
+
+      <h3 class="inresult">解説</h3>
+      <div class="whitebox">
+      <p>
+        　語尾が-coccusなっている菌種はほぼグラム陽性球菌です。グラム陽性とはグラム染色で青く染まる菌の総称で、中でもグラム陽性球菌には臨床的にいくつかの重要な菌種が含まれます。英語では、gram-positive
+        coccus（coccusの複数形でcocciと表記されることもある）はGPCと略されます。
+      </p>
+      <p>
+        　グラム染色所見から、連鎖状（chain）とブドウの房状（cluster）に分類されます。カタラーゼの有無によっても分類され、chainはカタラーゼ陰性、clusterはカタラーゼ陽性を示します。
+      </p>
+      <p>
+        　chainの代表的な属は、<i>Streptococcus</i>（連鎖球菌、レンサ球菌）属と<i>Enterococcus</i>（腸球菌）属です。
+      </p>
+      <p>
+        　<i>Streptococcus</i>属では、溶血性と血清型（特にLancefield型）が重要で、溶血性はα溶血（不完全溶血）、β溶血（完全溶血）、γ溶血（非溶血）に、Lancefield血清型はA群、B群、などに分類されます。<i
+          >Streptococcus pyogenes</i
+        >と<i>Streptococcus agalactiae</i
+        >は、どちらもβ溶血性を示し、β溶血性連鎖球菌（いわゆる溶連菌）と総称され、それぞれA群とB群とほぼ同義であるため、group
+        A <i>Streptococcus</i>、group B
+        <i>Streptococcus</i>の略で、GAS、GBSとも呼ばれます。尚、<i
+          >Streptococcus pneumoniae</i
+        >（肺炎球菌）はα溶血性を示します。<i>Streptococcus dysgalactiae</i>
+        subsp.
+        <i>equisimilis</i
+        >（SDSE）もβ溶血性の代表的な菌種で、CまたはG群に属しますが、しばしばA群を示すことが知られています。
+      </p>
+      <p>
+        　clusterの代表的な属は、<i>Staphylococcus</i>（ブドウ球菌）属です。
+      </p>
+      <p>
+        　<i>Staphylococcus</i>（ブドウ球菌）属は、コアグラーゼの有無とメチシリン耐性の有無が重要です。
+      </p>
+      <p>
+        　コアグラーゼを持たないブドウ球菌は、コアグラーゼ陰性ブドウ球菌、coagulase-negative
+        <i>Staphylococcus</i>（CNS）と総称されます。
+      </p>
+      <p>
+        　コアグラーゼ陽性のブドウ球菌はほとんどが、<i>Staphylococcus aureus</i
+        >（黄色ブドウ球菌）ですが、<i>Staphylococcus intermedius</i>や<i
+          >Staphylococcus hyicus</i
+        >等も知られています。CNSの代表は、<i>Staphylococcus epidermidis</i
+        >ですが、多くの菌種がCNSに含まれます。<i>Staphylococcus saprophyticus</i
+        >は、尿路感染症（UTI）の原因菌として知られています。
+      </p>
+    </div>
+      <section class="appendix">
+        <h3 class="inresult">Taxonomy</h3>
+        <div class="whitebox">
+          <i>Bacillota</i>
+          <ul class="taxonomy-ladder" style="line-height: 1;">
+            <li>
+              <i>Bacilli</i>
+              <ul>
+                <li>
+                  <i>Bacillales</i>
+                  <ul>
+                    <li>
+                      <i>Bacillaceae</i>
+                      <ul>
+                        <li><i>Bacillus</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Staphylococcaceae</i>
+                      <ul>
+                        <li><i>Staphylococcus</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <i>Lactobacillales</i>
+                  <ul>
+                    <li>
+                      <i>Lactobacillaceae</i>
+                      <ul>
+                        <li><i>Lactobacillus</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Streptococcaeae</i>
+                      <ul>
+                        <li><i>Streptococcus</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <h3 class="inresult">サマリー</h3>
+        <table>
+          <tr>
+            <th>属</th>
+            <th><i>Streptococcus</i><br />連鎖球菌</th>
+            <th><i>Enterococcus</i><br />腸球菌</th>
+            <th><i>Staphylococcus</i><br />ブドウ球菌</th>
+          </tr>
+          <tr>
+            <td>形状</td>
+            <td colspan="2">連鎖状（chain）</td>
+            <td>ブドウの房状（cluster）</td>
+          </tr>
+          <tr>
+            <td>カタラーゼ</td>
+            <td colspan="2">陰性</td>
+            <td>陽性</td>
+          </tr>
+          <tr>
+            <td>代表的な菌種</td>
+            <td>
+              <i>S. pneumoniae</i><br /><i>S. pyogenes</i>（GAS）<br /><i
+                >S. agalactiae</i
+              >（GBS）
+            </td>
+            <td><i>E. faecalis</i><br /><i>E. faecium</i></td>
+            <td><i>S. aureus</i><br /><i>S. epidermidis</i></td>
+          </tr>
+        </table>
+        <h3 class="inresult">もっと詳しく</h3>
+        <div class="whitebox">
+          <p>緑色連鎖球菌（Viridans <i>Streptococcus</i>）
+          <ul>
+            <li>サリバリウス<i>salivarius</i>菌群
+              <ul><li><i>S. salivarius</i></li></ul>
+            </li>
+            <li>ミティスmitis菌群
+              <ul>
+                <li><i>S. mitis</i></li>
+                <li><i>S. sanguinis</i></li>
+              </ul>
+            </li>
+            <li>アンギノーサス<i>anginosus</i>菌群（<i>S. milleri</i> groupとも呼ばれる）
+              <ul>
+                <li><i>S. anginosus</i></li>
+                <li><i>S. constellatus</i></li>
+                <li><i>S. intermedius</i></li>
+              </ul>
+            </li>
+            <li>ミュータンスmutans菌群
+              <ul>
+                <li><i>S. mutans</i></li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+
+
+          <p>まれな<i>Enterococcus</i>の菌種
+          <ul>
+            <li><i>E. gallinarum</i></li>
+            <li><i>E. casseliflavus</i></li>
+            <li><i>E. durans</i></li>
+            <li><i>E. hirae</i></li>
+            <li><i>E. avium</i></li>
+            <li><i>E. raffinosus</i></li>
+            <li><i>E. mundtii</i></li>
+            <li><i>E. dispar</i></li>
+            <li><i>E. malodoratus</i></li>
+            <li><i>E. cecorum</i></li>
+          </ul></p>
+
+          <p>比較的まれなcoagulase negative <i>Staphylococcus</i>
+            <ul>
+              <li><i>S. argenteus</i></li>
+              <li><i>S. capitis</i></li>
+              <li><i>S. caprae</i></li>
+              <li><i>S. lugdunensis</i></li>
+              <li><i>S. pseudointermedius</i></li>
+            </ul>
+          </p>
+
+        </div>
+      </section>
+    </div>
+    <script src="shuffle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

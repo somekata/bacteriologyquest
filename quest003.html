@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>問題003</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="table.css" />
+    <link rel="stylesheet" href="taxonomy.css" />
+  </head>
+  <body>
+    <h1>細菌学クイズ：グラム陰性球菌</h1>
+
+    <!-- 問題1 -->
+    <div id="question1" class="shuffle" data-correct="3,4">
+      <h2 class="question-title">グラム陰性球菌はどれか。2つ選べ。</h2>
+      <label
+        ><input type="checkbox" id="q1-1" /> <i>Enterococcus faecium</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-2" /> <i>Enterobacter cloacae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-3" /> <i>Moraxella catarrhalis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-4" />
+        <i>Neisseria meningitidis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-5" /> <i>Staphylococcus aureus</i></label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 問題2 -->
+    <div id="question2" class="shuffle" data-correct="3,4">
+      <h2 class="question-title">
+        慢性閉塞性肺疾患の増悪の原因菌として正しいのはどれか。2つ選べ。
+      </h2>
+      <label
+        ><input type="checkbox" id="q2-1" /> <i>Chlmydia trachomatis</i></label
+      >
+      <label><input type="checkbox" id="q2-2" /> <i>Escherichia coli</i></label>
+      <label
+        ><input type="checkbox" id="q2-3" />
+        <i>Haemophylus influenzae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-4" /> <i>Moraxella catarrhalis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q2-5" /> <i>Neisseria gonorrhoeae</i></label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 問題3 -->
+    <div id="question3" class="shuffle" data-correct="1,5">
+      <h2 class="question-title">
+        性感染症の原因菌として正しいのはどれか。2つ選べ。
+      </h2>
+      <label
+        ><input type="checkbox" id="q3-1" /> <i>Chlmydia trachomatis</i></label
+      >
+      <label><input type="checkbox" id="q3-2" /> <i>Escherichia coli</i></label>
+      <label
+        ><input type="checkbox" id="q3-3" />
+        <i>Haemophylus influenzae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-4" /> <i>Moraxella catarrhalis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-5" /> <i>Neisseria gonorrhoeae</i></label
+      >
+    </div>
+
+    <hr />
+    <!-- 判定ボタン -->
+    <button onclick="checkAnswers()">結果を確認する</button>
+
+    <!-- 判定結果と解答解説 -->
+    <div id="result" class="hidden">
+      <h3 class="inresult">判定</h3>
+      <div id="judgement" class="whitebox"></div>
+
+      <h3 class="inresult">正解</h3>
+      <div id="correct-answers" class="whitebox"></div>
+
+      <h3 class="inresult">解説</h3>
+      <div class="whitebox"></div>
+      <section class="appendix">
+        <h3 class="inresult">Taxonomy</h3>
+        <div class="whitebox">
+          <i>Pseudomonadota</i>
+          <ul class="taxonomy-ladder">
+            <li>
+              <i>Betaproteobacteria</i>
+              <ul>
+                <li>
+                  <i>Neisseriales</i>
+                  <ul>
+                    <li>
+                      <i>Neisseriaceae</i>
+                      <ul>
+                        <li><i>Neisseria</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i>Gammaproteobacteria</i>
+              <ul>
+                <li>
+                  <i>Pseudomonadales</i>
+                  <ul>
+                    <li>
+                      <i>Moraxellaceae</i>
+                      <ul>
+                        <li><i>Moraxellaceae</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <h3 class="inresult">サマリー</h3>
+        <div class="whitebox">
+          <p>準備中</p>
+        </div>
+        <!--
+
+        <table>
+          <tr>
+            <th>属</th>
+            <th><i>Streptococcus</i><br>連鎖球菌</th>
+            <th><i>Enterococcus</i><br>腸球菌</th>
+            <th><i>Staphylococcus</i><br>ブドウ球菌</th>
+          </tr>
+          <tr>
+            <td>形状</td>
+            <td colspan="2">連鎖状（chain）</td>
+            <td>ブドウの房状（cluster）</td>
+          </tr>
+          <tr>
+            <td>カタラーゼ</td>
+            <td colspan="2">陰性</td>
+            <td>陽性</td>
+          </tr>
+          <tr>
+            <td>代表的な菌種</td>
+            <td><i>S. pneumoniae</i><br /><i>S. pyogenes</i>（GAS）<br /><i>S. agalactiae</i>（GBS）</td>
+            <td><i>E. faecalis</i><br /><i>E. faecium</i></td>
+            <td><i>S. aureus</i><br /><i>S. epidermidis</i></td>
+          </tr>
+        </table>
+                -->
+      </section>
+    </div>
+    <script src="shuffle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
