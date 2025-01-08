@@ -103,3 +103,7 @@ function markAnswers(questionNumber, correctAnswers, userAnswers) {
     });
 }
 
+//footerSectionを自動で表示
+const footerSection = document.getElementById("footerSection");
+const footerSectionContents = '    <p>      <button onclick="history.back()">戻る</button>    </p>    <footer>      <p>&copy; 2024 細菌学クエスト</p>    </footer>'
+footerSection.outerHTML = footerSectionContents;

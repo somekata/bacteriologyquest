@@ -3,6 +3,7 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #fffae6; /* Light yellow background for a bright feel */
   padding: 20px;
+  padding-bottom: 100px;
 }
   
 /* Header style */
@@ -113,4 +114,43 @@ footer {
   bottom: 0;
   right:0px;
   width:100%;
+}
+
+.quest-list {
+  list-style-type: none; /* デフォルトの点を削除 */
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.quest-list li {
+  background: linear-gradient(120deg, #4CAF50, #81C784); /* グラデーション背景 */
+  border: 1px solid #3E8E41; /* ボーダー */
+  border-radius: 10px; /* 角を丸く */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ホバー効果用 */
+  overflow: hidden;
+}
+
+.quest-list li a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.quest-list li:hover {
+  transform: scale(1.05); /* 少し拡大 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 影を追加 */
+}
+
+.quest-list li a:hover {
+  text-decoration: underline; /* ホバー時にアンダーラインを表示 */
+}
+
+.quest-list li:nth-child(odd) {
+  background: linear-gradient(120deg, #3F51B5, #7986CB); /* 奇数行の異なる色 */
 }

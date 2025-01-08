@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quest6:anaerobe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="table.css" />
+    <link rel="stylesheet" href="taxonomy.css" />
+  </head>
+  <body>
+    <h1>細菌学クエスト6：嫌気性菌</h1>
+
+    <!-- 問題1 -->
+    <div id="question1" class="shuffle" data-correct="3,4">
+      <h2 class="question-title">偏性嫌気性菌はどれか。2つ選べ。</h2>
+      <label
+        ><input type="checkbox" id="q1-1" /> <i>Chlamydia pneumoniae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-2" />
+        <i>Haemophylus influenzae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-3" />
+        <i>Fusobacterium nucleatum</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-4" /> <i>Peptococcus simiae</i></label
+      >
+      <label
+        ><input type="checkbox" id="q1-5" />
+        <i>Streptococcus pneumoniae</i></label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 問題2 -->
+    <div id="question2" class="shuffle" data-correct="2,4">
+      <h2 class="question-title">
+        嫌気性菌に関する説明として正しいのはどれか。2つ選べ。
+      </h2>
+      <label><input type="checkbox" id="q2-1" /> ATPを合成できない。</label>
+      <label
+        ><input type="checkbox" id="q2-2" />
+        ブドウ糖を発酵して、酸またはアルカリを産生する。</label
+      >
+      <label><input type="checkbox" id="q2-3" /> カタラーゼを有する。</label>
+      <label
+        ><input type="checkbox" id="q2-4" />
+        <i>Peptostreptococcus anaerobius</i
+        >はグラム陽性連鎖状球菌である。</label
+      >
+      <label
+        ><input type="checkbox" id="q2-5" />
+        <i>Bacteroides fragilis</i>は芽胞を形成する。</label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 問題3 -->
+    <div id="question3" class="shuffle" data-correct="1,4">
+      <h2 class="question-title">
+        口腔内よりも、横隔膜よりも下の消化管に多くみられる嫌気意性菌はどれか。2つ選べ。
+      </h2>
+      <label
+        ><input type="checkbox" id="q3-1" /> <i>Bacteroides fragilis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-2" />
+        <i>Porphyromonas gingivalis</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-3" />
+        <i>Peptostreptococcus anaerobius</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-4" />
+        <i>Fusobacterium necrophorum</i></label
+      >
+      <label
+        ><input type="checkbox" id="q3-5" />
+        <i>Prevotella melaninogenica</i></label
+      >
+    </div>
+
+    <hr />
+    <!-- 問題4 -->
+    <div id="question4" class="shuffle" data-correct="3,5">
+      <h2 class="question-title">
+        細菌とそれに有効な治療薬の組み合わせとして正しいのはどれか。2つ選べ。
+      </h2>
+      <label
+        ><input type="checkbox" id="q4-1" /> <i>Bacteroides fragilis</i> ---
+        セファゾリン</label
+      >
+      <label
+        ><input type="checkbox" id="q4-2" /> <i>Clostridioides difficile</i> ---
+        クリンダマイシン</label
+      >
+      <label
+        ><input type="checkbox" id="q4-3" /> <i>Actinomyces israelii</i> ---
+        ペニシリンG</label
+      >
+      <label
+        ><input type="checkbox" id="q4-4" />
+        <i>Fusobacterium necrophorum</i> --- セフトリアキソン</label
+      >
+      <label
+        ><input type="checkbox" id="q4-5" />
+        <i>Prevotella melaninogenica</i> --- アモキシシリン/クラブラン酸</label
+      >
+    </div>
+
+    <hr />
+
+    <!-- 判定ボタン -->
+    <button onclick="checkAnswers()">結果を確認する</button>
+
+    <!-- 判定結果と解答解説 -->
+    <div id="result" class="hidden">
+      <h3 class="inresult">判定</h3>
+      <div id="judgement" class="whitebox"></div>
+
+      <h3 class="inresult">正解</h3>
+      <div id="correct-answers" class="whitebox"></div>
+
+      <h3 class="inresult">解説</h3>
+      <div class="whitebox">
+        <p>
+          　嫌気培養でのみ培養可能な細菌の総称で、タキソノミーは広範にわたる。単に嫌気性菌という場合には、通常は偏性嫌気性菌を指す。ただし、通性嫌気性菌と明確に分けたい場合には偏性嫌気性菌と呼ぶ。<i
+            >Bacillota</i
+          >
+          に含まれる菌種は、<i>Veillonera</i>を除き、グラム陽性菌である。<i>Bacteroidota</i>、<i>Fusobacteriota</i>に含まれる菌種はグラム陰性菌である。<em>Actinomyces</em>はグラム陽性の嫌気性の放線菌である。<br />
+          　嫌気性菌は消化管の常在菌としても知られるが、口腔内をはじめとする上部消化管、横隔膜以下の下部消化管では常在する菌種がやや異なる。<em>Peptococcus</em>属や<em>Prevotella</em>属をはじめとする上部消化管に多い嫌気性菌は、ペニシリン系薬が有効な場合が多い。ただし、β-ラクタマーゼを産生する菌種もいるため、β-ラクタマーゼ阻害薬配合ペニシリン系薬が選択される。一方、下部消化管では、<em>Bacteroides</em>属を考慮した治療薬の選択が必要になる。<br />
+          　一般に、セファロスポリン系薬は嫌気性菌に無効である。セファマイシン系薬やオキサセフェム系薬は一部の嫌気性菌に有効である。嫌気性菌に比較的良好な活性を有するメトロニダゾールやクリンダマイシンも、苦手とする菌種があるため注意が必要である。
+        </p>
+        <p>
+          参考文献
+          <ul>
+            <li><a href="https://www.jstage.jst.go.jp/article/jjoms1967/48/8/48_8_379/_pdf">栗山智有ほか. 顎ロ腔領域歯性感染症から分離 される<em>Prevotella</em>属のβ-ラクタマーゼ産生性とβ-ラクタム系抗菌薬に対する感受性についての検討</a></li>
+            <li><a href="https://www.jstage.jst.go.jp/article/jsotp/34/3/34_15.08/_pdf/-char/ja">金坂伊須萌ほか. 歯性感染症から分離した<em>Prevotella</em>属が産生するβ-lactamaseとceftriaxone耐性に関する検討</a>
+              </li>
+          </ul>
+        </p>
+      </div>
+      <section class="appendix">
+        <h3 class="inresult">Taxonomy</h3>
+        <div class="whitebox">
+          <i>Bacillota</i>
+          <ul class="taxonomy-ladder">
+            <li>
+              <i>Clostridia</i>
+              <ul>
+                <li>
+                  <i>Eubacteriales</i>
+                  <ul>
+                    <li>
+                      <i>Clostridiaceae</i>
+                      <ul>
+                        <li><i>Clostridium</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Peptococcaceae</i>
+                      <ul>
+                        <li><i>Peptococcus</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Peptostreptococcaceae</i>
+                      <ul>
+                        <li><i>Peptostreptococcus</i></li>
+                        <li><i>Clostridioides</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Peptoniphilaceae</i>
+                      <ul>
+                        <li><i>Anaerococcus</i></li>
+
+                        <li><i>Finegoldia</i></li>
+                        <li><i>Peptoniphilus</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i>Erysipelotrichia</i>
+              <ul>
+                <li>
+                  <i>Erysipelotrichales</i>
+                  <ul>
+                    <li>
+                      <i>Erysipelotrichaceae</i>
+                      <ul>
+                        <li><i>Erysipelothrix</i></li>
+                        <li><i>Solobacterium</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i>Negativicutes</i>
+              <ul>
+                <li>
+                  <i>Veillonellales</i>
+                  <ul>
+                    <li>
+                      <i>Veillonellaceae</i>
+                      <ul>
+                        <li><i>Veillonella</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <i>Bacteroidota</i>
+          <ul class="taxonomy-ladder">
+            <li>
+              <i>Bacteroidia</i>
+              <ul>
+                <li>
+                  <i>Bacteroidales</i>
+                  <ul>
+                    <li>
+                      <i>Bacteroidaceae</i>
+                      <ul>
+                        <li><i>Bacteroides</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Porphyromonadaceae</i>
+                      <ul>
+                        <li><i>Porphyromonas</i></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <i>Prevotellaceae</i>
+                      <ul>
+                        <li><i>Prevotella</i></li>
+                        <li><i>Alloprevotella</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <i>Fusobacteriota</i>
+          <ul class="taxonomy-ladder">
+            <li>
+              <i>Fusobacteriia</i>
+              <ul>
+                <li>
+                  <i>Fusobacteriales</i>
+                  <ul>
+                    <li>
+                      <i>Fusobacteriaceae</i>
+                      <ul>
+                        <li><i>Fusobacterium</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <i>Actinomycetota</i>
+          <ul class="taxonomy-ladder">
+            <li>
+              <i>Actinomycetes</i>
+              <ul>
+                <li>
+                  <i>Actinomycetales</i>
+                  <ul>
+                    <li>
+                      <i>Actinomycetaceae</i>
+                      <ul>
+                        <li><i>Actinomyces</i></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <h3 class="inresult">サマリー</h3>
+      </section>
+    </div>
+    <div id="footerSection"></div>
+    <script src="shuffle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
